@@ -275,13 +275,13 @@ def writeXcourbesPGF_Nyaxis(
             for i in range(j):
                 bound.append({})
         if "xmin" in bound[j]:
-            fichier.write("xmin=" + str(bound["xmin"]) + ",\n")
+            fichier.write("xmin=" + str(bound[j]["xmin"]) + ",\n")
         if "xmax" in bound[j]:
-            fichier.write("xmax=" + str(bound["xmax"]) + ",\n")
+            fichier.write("xmax=" + str(bound[j]["xmax"]) + ",\n")
         if "ymin" in bound[j]:
-            fichier.write("ymin=" + str(bound["ymin"]) + ",\n")
+            fichier.write("ymin=" + str(bound[j]["ymin"]) + ",\n")
         if "ymax" in bound[j]:
-            fichier.write("ymax=" + str(bound["ymax"]) + ",\n")
+            fichier.write("ymax=" + str(bound[j]["ymax"]) + ",\n")
         fichier.write("]\n")
 
         if hasattr(style[j], "plotset"):
