@@ -206,7 +206,7 @@ only_marks\\\\%
 ###############################################################################
 
 
-def writeXcourbesPGF_3yaxis(
+def writeXcourbesPGF_Nyaxis(
     lCourbe,
     directory=None,
     name=None,
@@ -242,12 +242,12 @@ def writeXcourbesPGF_3yaxis(
     for stl in style:
         fichier.write(stl.plotcyclelist)
 
-    fichier.write(
-        """\pgfplotscreateplotcyclelist{myonlymark}{%
-only_marks\\\\%
-}
-"""
-    )
+#     fichier.write(
+#         """\pgfplotscreateplotcyclelist{myonlymark}{%
+# only_marks\\\\%
+# }
+# """
+#     )
 
     fichier.write("\\beginpgfgraphicnamed{" + name + "_}\n")
 
@@ -258,7 +258,6 @@ only_marks\\\\%
         fichier.write("\\begin{" + style[j].axis_type + "}[\n")
 
         fichier.write(style[j].axis)
-
         if list_of_C[0].label != None:
             fichier.write("legend entries={")
             for C in list_of_C:
